@@ -9,24 +9,27 @@ data = {
 
 df = pd.DataFrame(data)
 
-
-print(
-    """Enter the choice
-1. Employee ID
-2. Name
-3. Age
-4. Salary """
-)
-choice = int(input())
-if choice == 1:
-    query = input("Enter the query to be Employee ID ")
-    print(df[df["Employee ID"] == query])
-elif choice == 2:
-    query = input("Enter the query to be Name ")
-    print(df[df["Name"] == query])
-elif choice == 3:
-    query = input("Enter the query to be Age ")
-    print(df[df["Age"] == query])
-elif choice == 4:
-    query = input("Enter the query to be Salary ")
-    print(df[df["Salary"] == query])
+while True:
+    print(
+        """Enter the choice
+    1. Employee ID
+    2. Name
+    3. Age
+    4. Salary 
+    5. Exit """
+    )
+    choice = int(input())
+    if choice == 1:
+        query = input("Enter the query to be Employee ID ")
+        print(df[df["Employee ID"] == query])
+    elif choice == 2:
+        query = input("Enter the query to be Name ")
+        print(df[df["Name"] == query])
+    elif choice == 3:
+        query = input("Enter the query to be Age ")
+        print(df[df["Age"] == query])
+    elif choice == 4:
+        query = input("Enter the query to be Salary ")
+        print(df[df["Salary"]==query])
+    else:
+        break
